@@ -1,0 +1,68 @@
+*  Computer Memory unit ..
+
+In this concept i laern about the process how the code work inside the computer.
+1.we create a flow chart and psedocode for the problem.
+2.we write a language speific code which is known by us like c++,java,python etc.
+3.then compile it so the compiler convert our code into binary numbers and send it to our computer memory unit.
+4.and memory unit generATE THE OUTPUT AFTER reading the code 
+
+1 bit in binary {0,1}
+8 bit = 1 byte
+1024 bytes = 1kb
+1024 kb = 1mb 
+1024 mb = 1gb
+1024 gb = 1tb
+1024 tb = 1pb
+
+ASCii : - American Standard COde for information interchange
+
+Q write our first c++ code.
+
+#include<iostream>   ---- header file for taking input and output 
+using namespace std;       ---- standard to know the computer which method we use 
+
+int main()
+{
+   cout<<"Hello world";
+
+return 0;
+}
+
+
+* variables and datatypes - 
+char : 'a' , 'b', 'c'
+int : 1,2,3,4,5,6,7,8
+string : "word" "number"
+float : 1.2 , 3.5
+double : - 1.334566
+boolean :- true or false 0/1
+
+
+* operators 
+
+= assignment operator  
+a =3 -- assign the value 3 to a 
+
+
+Comparison operator---
+>= greater eqaulto
+<= lessthen equalto
+== doubleeualto
+
+Q How to take input from the user's 
+#include<iostream>   ---- header file for taking input and output 
+using namespace std;       ---- standard to know the computer which method we use 
+
+int main()
+{
+   int n;
+   cout<<"Enter a number";
+   cin>>n;
+
+   cout<<n;
+
+return 0;
+}
+
+
+
