@@ -1,0 +1,3 @@
+Original Data
+123 78 280 30 4 
+ Sorting Data4 30 78 123 280 

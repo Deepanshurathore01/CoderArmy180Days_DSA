@@ -1,0 +1,20 @@
+Initialization of Min Heap:
+
+A min-heap is a binary heap data structure where the parent node has a value smaller than or equal to its children.
+The std::priority_queue is used to implement a min-heap in C++.
+The constructor std::priority_queue<int, std::vector<int>, std::greater<int>> initializes a min-heap with integers and uses std::greater<int> as the comparison function (to make it a min-heap).
+The min-heap is initially populated with the first k elements of the input vector nums.
+Iterating Through the Remaining Elements:
+
+The loop starts from index k and iterates through the remaining elements of the input vector nums.
+Updating Min-Heap:
+
+For each element in the remaining portion of nums, the code checks if the current element is greater than the smallest element in the min-heap (top of the heap).
+If yes, it removes the smallest element from the heap and inserts the current element.
+Result:
+
+After processing all elements, the top of the min-heap contains the kth largest element among the elements processed so far.
+Final Result:
+
+The function returns the top of the min-heap, which represents the kth largest element in the entire array.
+This approach is efficient because it maintains only the k smallest elements in the min-heap, updating it as needed while iterating through the array. The time complexity of this algorithm is O(n log k), where n is the size of the input vector nums.
