@@ -1,75 +1,32 @@
-#include <iostream>
-using namespace std;
-class Node{
-public:
-    int data;
-    Node *next;
-    Node(int data){
-        this -> data = data;
-        this -> next = NULL;
-    }
-};
-
-Node* takeinput() {
-    int data;
-    cin >> data;
-    Node* head = NULL, *tail = NULL;
-    while(data != -1){
-        Node *newNode = new Node(data);
-        if(head == NULL)                  {
-            head = newNode;
-            tail = newNode;
-        }
-        else{
-            tail -> next = newNode;
-            tail = newNode;
-        }
-        cin >> data;
-    }
-    return head;
-}
-
-Node* insertNodeRec(Node *head, int i, int data) {
-    /* Don't write main().
-     * Don't read input, it is passed as function argument.
-     * Return output and don't print it.
-     * Taking input is handled automatically.
-     */
-    if(head==NULL)
-        return NULL;
-    if(i==0){
-        Node* temp=new Node(data);
-        temp->next=head;
-        return temp;
-    }
-    
-    if(i==1){
-        Node* temp=new Node(data);
-        temp->next=head->next;
-        head->next=temp;
+Node* insert(Node* head, int pos, int val) {
+    if (pos < 0) {
+        std::cout << "Invalid position. Position should be non-negative.\n";
         return head;
     }
-    Node* curr=insertNodeRec(head->next,i-1,data);
-    
-    return head;
-    
-}
 
-
-void print(Node *head) {
-    Node *temp = head;
-    while(temp != NULL) {
-        cout << temp -> data << " ";
-        temp = temp -> next;
+    Node* newNode = new Node(val);
+    
+    if (pos == 0) {
+        newNode->next = head;
+        return newNode;
     }
-    cout<<endl;
-}
 
-int main() {
-    Node *head = takeinput();
-    int pos, data;
-    cin >> pos >> data;
-    head = insertNodeRec(head, pos, data);
-    print(head);
-    return 0;
+    Node* current = head;
+    int count = 0;
+
+    while (current != nullptr && count < pos - 1) {
+        current = current->next;
+        count++;
+    }
+
+    if (current == nullptr) {
+        std::cout << "Invalid position. Cannot insert at position " << pos << ".\n";
+        delete newNode;
+        return head;
+    }
+
+    newNode->next = current->next;
+    current->next = newNode;
+
+    return head;
 }
