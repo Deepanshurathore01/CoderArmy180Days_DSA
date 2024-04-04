@@ -49,3 +49,26 @@ int main()
     }
   }
 }
+
+
+/* level order 
+void(Node*root, vector<int>&ans)
+    {
+        if(root == 0)
+        return;
+        
+        queue<Node*>q;
+        Node *temp =new Node(root);
+        while(!q.empty)
+        {
+            Node*one =q.front();
+            q.pop();
+        }
+    }
+    //Function to return the level order traversal of a tree.
+    vector<int> levelOrder(Node* root)
+    {
+      vector<int>ans;
+      Level(root,ans);
+      return ans;
+    }*/
