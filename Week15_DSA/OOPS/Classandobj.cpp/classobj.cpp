@@ -45,7 +45,7 @@ int getrollnum(){
 
 int main(){
   Student s1;
-  s1.setname("");
+  s1.setname("Deepanshu");
   s1.setage(20);
   s1.setrollnum(1024);
   s1.setgrade("A++");

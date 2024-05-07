@@ -4,19 +4,30 @@ using namespace std;
 
 int main()
 {
-  pair<string ,int>p;
-  // first method 
-  // p =make_pair("Deepanshu",21);
+//  pair<string,int>p;
 
-  // second method 
-  // p.first="Deepanshu";
-  // p.second=21;
+//  two methods
+// first method
+// p=make_pair("Deepanshu",21);
+//second method
+// p.first ="Aman";
+// p.second =12;
+// cout<<p.first<<" "<<p.second<<" ";
 
-  // Multiple values name age  or weight
-  pair<string,pair<int,int> >p;
-  // p.first ="Deepanshu";
-  // p.second.first=21;
-  // p.second.second=46;
-  p=make_pair("deep",make_pair(21,46));
-  cout<<p.first<<" "<<p.second.first<<" "<<p.second.second;
+// if we want to add name age weight in pair
+
+// pair<string,pair<int,int> >p;
+// p.first ="Rahul";
+// p.second.first=25;
+// p.second.second=80;
+// p =make_pair("rohit",make_pair(25,80));
+// cout<<p.first<<" "<<p.second.first<<" "<<p.second.second<<" ";
+
+pair<pair<string,int>, int> p;
+p=make_pair(make_pair("rahul",24),46);
+
+cout<<p.first.first<<" "<<p.first.second<<" "<<p.second;
+
+
+
 }

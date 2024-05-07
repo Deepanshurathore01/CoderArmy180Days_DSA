@@ -18,9 +18,9 @@ int main()
   Node *Head;
   Head = NULL;
 
-  int arr[4] = {2,4,6,8};
+  int arr[6] = {2,4,6,8 ,9};
 // Insert the node at begining 
-  for(int i=0;i<4;i++)
+  for(int i=0;i<5;i++)
   {
     // if linked list doesn't exists
     if(Head ==NULL)
