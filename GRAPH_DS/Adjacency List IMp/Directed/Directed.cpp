@@ -7,14 +7,14 @@ int main()
   int vertex , edges;
   cin>>vertex>>edges;
 
-// undirected weighted graph 
+// directed weighted graph 
   vector<pair<int,int> >AdjList[vertex];
   int u,v,weight;
   for(int i=0;i<edges;i++)
   {
     cin>>u>>v>>weight;
     AdjList[u].push_back(make_pair(v,weight));
-    AdjList[v].push_back(make_pair(u,weight));
+  
   }
 
   // print the list 
