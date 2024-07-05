@@ -29,3 +29,26 @@ void shortest_distance(vector<vector<int>>& matrix) {
 
 Tc: O(n^3)
 Sc: O(1)
+
+// 2nd Approch  with using int max
+void shortest_distance(vector<vector<int>>& matrix) {
+    int n = matrix.size();
+
+    // Floyd-Warshall algorithm
+    for (int k = 0; k < n; k++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                // Check if there is a path from i to k and k to j
+                if (matrix[i][k] != -1 && matrix[k][j] != -1) {
+                    if (matrix[i][j] == -1) {
+                        // If there is no direct path from i to j, use the path through k
+                        matrix[i][j] = matrix[i][k] + matrix[k][j];
+                    } else {
+                        // If there is a direct path, choose the shorter one
+                        matrix[i][j] = min(matrix[i][j], matrix[i][k] + matrix[k][j]);
+                    }
+                }
+            }
+        }
+    }
+}
