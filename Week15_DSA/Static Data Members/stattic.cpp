@@ -28,7 +28,9 @@ int main()
   Customer A1("Rohit",1,1000);
   Customer A2("Deepanshu",2,1800);
   Customer A3("Deepanshu",3,1800);
+  Customer A4("Deepanshu",4,1800);
   A1.display();
   A2.display();
   A3.display();
+  A4.display();
 }

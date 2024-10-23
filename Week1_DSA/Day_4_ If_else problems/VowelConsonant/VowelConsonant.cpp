@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-  char c = 'b';
+  char c = 'e';
 
   if(c =='a'){
     cout<<"vowel";

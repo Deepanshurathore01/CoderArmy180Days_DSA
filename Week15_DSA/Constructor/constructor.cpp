@@ -46,15 +46,15 @@ void display(){
 };
 
 int main(){
-  Customer A1;
-  Customer A2("Rohit",12,2400);
+  // Customer A1;
+  // Customer A2("Rohit",12,2400);
   Customer A3("Adi",12);
-  A1.display();
-  A2.display();
-  A3.display();
+  // A1.display();
+  // A2.display();
+  // A3.display();
   Customer A4(A3);
   A4.display();  
-  Customer A5;
-  A5 = A1;
-  A5.display();
+  // Customer A5;
+  // A5 = A1;
+  // A5.display();
 }

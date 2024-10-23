@@ -6,14 +6,14 @@ int main(){
   cout<<"Enter a number :";
   cin>>n;
 
-  // for( i =1;i<=n;i++){
-  //   sum +=i;
-  // }
+  for( i =1;i<=n;i++){
+    sum +=i;
+  }
 
 // using formula 
-  cout<<(n * (n+1))/2;
+  // cout<<(n * (n+1))/2;
 
 
-  // cout<<sum;
+  cout<<sum;
   return 0;
 }

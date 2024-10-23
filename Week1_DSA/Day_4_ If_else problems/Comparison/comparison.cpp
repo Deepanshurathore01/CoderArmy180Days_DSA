@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-  int package =9;
+  int package =11;
   if(package >10){
     cout<<"Accepted";
   }
